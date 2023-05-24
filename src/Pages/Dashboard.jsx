@@ -33,7 +33,7 @@ const Dashboard = () => {
         }
     ]
     return (
-        <div>            
+        <div>
             <div className="grid text-white grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {
                     dataName.map(data => <ScoreCard
@@ -45,6 +45,16 @@ const Dashboard = () => {
 
             </div>
             <div>
+                <div className="flex gap-6">
+                    <div className="flex gap-2 items-center">
+                        <div className="w-[20px] mt-6 bg-[#8884d8]  h-[30px] "></div>
+                        <h3 className="text-2xl font-bold mt-5">Invest</h3>
+                    </div>
+                    <div className="flex gap-2 items-center">
+                        <div className="w-[20px] mt-6 bg-[#82ca9d]  h-[30px] "></div>
+                        <h3 className="text-2xl font-bold mt-5">Revinue</h3>
+                    </div>
+                </div>
                 <MonthWiseGraph />
             </div>
             <div>
