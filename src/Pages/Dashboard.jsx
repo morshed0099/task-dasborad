@@ -1,8 +1,5 @@
-import MessageIcon from "../Components/MessageIcon";
-import ProfileIcon from "../Components/ProfileIcon";
+
 import ScoreCard from "../Components/ScoreCard";
-import SearchBar from "../Components/SearchBar";
-import {AiOutlineMenuUnfold} from 'react-icons/ai'
 
 const Dashboard = () => {
 
@@ -35,17 +32,8 @@ const Dashboard = () => {
     ]
     return (
         <div>
-            <div className='pb-4 flex justify-between items-center'>
-                <div className="lg:hidden ">
-                    <label htmlFor="my-drawer-2" className=" lg:hidden"><AiOutlineMenuUnfold className="text-blue-700 cursor-pointer text-4xl hover:text-blue-900" /></label>
-                </div>
-                <SearchBar />
-                <div className="flex gap-6">
-                    <MessageIcon />
-                    <ProfileIcon />
-                </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            
+            <div className="grid text-white grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {
                     dataName.map(data => <ScoreCard
                         data={data}
