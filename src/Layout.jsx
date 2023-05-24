@@ -1,4 +1,5 @@
 import {RxDashboard} from 'react-icons/rx'
+import {BiMessageDetail} from 'react-icons/bi'
 import { NavLink, Outlet } from 'react-router-dom';
 
 const Layout = () => {
@@ -7,8 +8,7 @@ const Layout = () => {
             <div className="drawer drawer-mobile">
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content  flex p-4 flex-col">
-                    <Outlet />
-                    <label htmlFor="my-drawer-2"  className="btn btn-primary  lg:hidden">x</label>
+                    <Outlet />                  
 
                 </div>
                 <div className="drawer-side">
@@ -18,7 +18,9 @@ const Layout = () => {
                         <li>
                        <NavLink to='/'><RxDashboard className='text-white' />Dashborad</NavLink>
                         </li>
-                        <li><a>Sidebar Item 2</a></li>
+                        <li>
+                            <NavLink to='/message'><BiMessageDetail className='text-white' /> Message</NavLink>
+                        </li>
                     </ul>
 
                 </div>
