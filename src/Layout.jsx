@@ -18,20 +18,20 @@ const Layout = () => {
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                     <ul className="menu p-4 mb-2 w-80 bg-gradient-to-t  from-[#8884d8] to-[#82ca9d] text-base-content">
 
-                        <li>
+                        <li className='mb-2'>
                             <NavLink to='/'><RxDashboard className='text-white' />Dashborad</NavLink>
                         </li>
-                        <li>
+                        <li  className='mb-2'>
                             <NavLink to='/message'><BiMessageDetail className='text-white' /> Message</NavLink>
                         </li>
-                        <li>
+                        <li  className='mb-2'>
                             <NavLink to='/product'><MdProductionQuantityLimits className='text-white' />Products</NavLink>
                         </li>
-                        <li>
+                        <li  className='mb-2'>
                             <NavLink to='/login'><MdLogin className='text-white' />Login</NavLink>
                         </li>
-                        <li>
-                           <button><MdOutlineLogout /> Logout</button>
+                        <li  className='mb-2'>
+                           <button><MdOutlineLogout className='text-white'/> Logout</button>
                         </li>
                     </ul>
 

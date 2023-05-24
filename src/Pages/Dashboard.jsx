@@ -1,5 +1,6 @@
 
 import MonthWiseGraph from "../Components/MonthWiseGraph";
+import OrderTable from "../Components/OrderTable";
 import ScoreCard from "../Components/ScoreCard";
 
 const Dashboard = () => {
@@ -43,8 +44,11 @@ const Dashboard = () => {
                 }
 
             </div>
-            <div className="w-full h-[100vh]">
+            <div>
                 <MonthWiseGraph />
+            </div>
+            <div>
+                <OrderTable />
             </div>
         </div>
     );
