@@ -65,8 +65,7 @@ const MonthWiseGraph = () => {
                     </linearGradient>
                 </defs>
                 <XAxis dataKey="name" />
-                <YAxis aria-hidden='true' />
-                <CartesianGrid strokeDasharray="3 3" />
+                <YAxis  />
                 <Tooltip />
                 <Area type="monotone" dataKey="uv" stroke="#8884d8" fillOpacity={1} fill="url(#colorUv)" />
                 <Area type="monotone" dataKey="pv" stroke="#82ca9d" fillOpacity={1} fill="url(#colorPv)" />
