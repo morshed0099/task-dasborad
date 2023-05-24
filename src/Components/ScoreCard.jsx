@@ -5,7 +5,7 @@ import ScoreCardGraph from "./ScoreCardGraph";
 
 const ScoreCard = ({ data }) => {
     return (
-        <div className={`flex justify-between bg-gradient-to-t from-blue-900 to-base-100 p-4 rounded-md shadow-md   items-center `}>
+        <div className={`flex justify-between bg-gradient-to-t from-[#82ca9d]  to-[#8884d8] p-4 rounded-md shadow-md   items-center `}>
             <div className="">
                 <h5>{data.title}</h5>
                 <h2>{data.amount}</h2>

@@ -16,7 +16,7 @@ const Layout = () => {
                 </div>
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
-                    <ul className="menu p-4 mb-2 w-80 bg-gradient-to-t from-blue-600  to-blue-900 text-base-content">
+                    <ul className="menu p-4 mb-2 w-80 bg-gradient-to-t  from-[#8884d8] to-[#82ca9d] text-base-content">
 
                         <li>
                             <NavLink to='/'><RxDashboard className='text-white' />Dashborad</NavLink>

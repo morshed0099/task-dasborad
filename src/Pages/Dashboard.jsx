@@ -1,4 +1,5 @@
 
+import MonthWiseGraph from "../Components/MonthWiseGraph";
 import ScoreCard from "../Components/ScoreCard";
 
 const Dashboard = () => {
@@ -31,8 +32,7 @@ const Dashboard = () => {
         }
     ]
     return (
-        <div>
-            
+        <div>            
             <div className="grid text-white grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 {
                     dataName.map(data => <ScoreCard
@@ -42,6 +42,9 @@ const Dashboard = () => {
                     />)
                 }
 
+            </div>
+            <div className="w-full h-[100vh]">
+                <MonthWiseGraph />
             </div>
         </div>
     );
