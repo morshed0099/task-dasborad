@@ -1,19 +1,21 @@
 import DateRangePicker from '@wojtekmaj/react-daterange-picker';
 import '@wojtekmaj/react-daterange-picker/dist/DateRangePicker.css';
+import { useState } from 'react';
 import 'react-calendar/dist/Calendar.css';
-import React, { useState } from 'react';
+
 import { AiFillFilter } from 'react-icons/ai';
 
 const OrderTable = () => {
     const [open, setopen] = useState(false)
+    // const [month,setMonth]=useState('')
 
     const [value, onChange] = useState([new Date(), new Date()]);
-    // console.log(value[0],value[1]);
+    console.log((new Intl.DateTimeFormat('en-US', { month: '2-digit',year: 'numeric'}).format(value[0])));
   
     {
         value &&
         
-        (new Intl.DateTimeFormat('en-US', { month: '2-digit',day: '2-digit',year: 'numeric'}).format(value[0]))
+        (new Intl.DateTimeFormat('en-US', { month: '2-digit',year: 'numeric'}).format(value[0]))
     }
     
     const hadelFrom=()=>{
@@ -33,8 +35,7 @@ const OrderTable = () => {
                 <table className="table  table-zebra w-full">
                     {/* head */}
                     <thead >
-                        <tr>
-                            <th></th>
+                        <tr>                           
                             <th>Name</th>
                             <th>Job</th>
                             <th>Favorite Color</th>
@@ -51,7 +52,7 @@ const OrderTable = () => {
                     <tbody>
                         {/* row 1 */}
                         <tr>
-                            <th>1</th>
+                           
                             <td>Cy Ganderton</td>
                             <td>Quality Control Specialist</td>
                             <td>Blue</td>
@@ -59,14 +60,14 @@ const OrderTable = () => {
                         </tr>
                         {/* row 2 */}
                         <tr>
-                            <th>2</th>
+                   
                             <td>Hart Hagerty</td>
                             <td>Desktop Support Technician</td>
                             <td>Purple</td>
                         </tr>
                         {/* row 3 */}
                         <tr>
-                            <th>3</th>
+                           
                             <td>Brice Swyre</td>
                             <td>Tax Accountant</td>
                             <td>Red</td>
