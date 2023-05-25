@@ -1,9 +1,10 @@
 import React from 'react';
+import ProductTable from '../Components/ProductTable';
 
 const Products = () => {
     return (
         <div>
-            <h1>product page</h1>
+          <ProductTable />
         </div>
     );
 };
