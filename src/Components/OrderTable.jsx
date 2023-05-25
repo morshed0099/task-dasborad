@@ -14,7 +14,7 @@ const OrderTable = () => {
 
     const handelCange = (e) => {
         console.log(e.target.value)
-        }
+    }
 
 
     {
@@ -45,7 +45,7 @@ const OrderTable = () => {
                             <th>Job</th>
                             <th>Favorite Color</th>
                             <th>
-                                <select  onChange={(e) => handelCange(e)} className='p-2 rounded-md select-info w-full'>
+                                <select onChange={(e) => handelCange(e)} className='p-2 rounded-md select-info w-full'>
                                     <option value="status" selected disabled>Status</option>
                                     <option value='pending'>Pending</option>
                                     <option value='success' >Success</option>
@@ -79,6 +79,19 @@ const OrderTable = () => {
                         </tr>
                     </tbody>
                 </table>
+                <tfoot>
+                    <th>
+                    <div className=' mt-3 flex justify-center'>
+                        <div className="btn-group">
+                            <button className="btn btn-active">1</button>
+                            <button className="btn">2</button>
+                            <button className="btn">3</button>
+                            <button className="btn">4</button>
+                        </div>
+                    </div>
+                    </th>
+                    
+                </tfoot>
             </div>
         </>
 

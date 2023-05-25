@@ -59,7 +59,7 @@ const Dashboard = () => {
             </div>
             <div>
                 <OrderTable />
-            </div>
+            </div>          
         </div>
     );
 };
