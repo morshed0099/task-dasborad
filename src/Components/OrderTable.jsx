@@ -38,12 +38,12 @@ const OrderTable = () => {
             }
             <div className="overflow-x-auto w-full">
                 <table className="table  table-zebra w-full">
-                    {/* head */}
+                   
                     <thead >
                         <tr>
                             <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
+                            <th>Description</th>
+                            <th>price</th>
                             <th>
                                 <select onChange={(e) => handelCange(e)} className='p-2 rounded-md select-info w-full'>
                                     <option value="status" selected disabled>Status</option>
@@ -55,32 +55,36 @@ const OrderTable = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {/* row 1 */}
+                     
                         <tr>
 
                             <td>Cy Ganderton</td>
                             <td>Quality Control Specialist</td>
-                            <td>Blue</td>
-                            <td>25/05/23</td>
+                            <td>2750</td>
+                            <td>pending</td>
+                            <td>27.04.23</td>
                         </tr>
-                        {/* row 2 */}
+                     
                         <tr>
 
                             <td>Hart Hagerty</td>
                             <td>Desktop Support Technician</td>
-                            <td>Purple</td>
+                            <td>3850</td>
+                            <td>success</td>
+                            <td>20.04.23</td>
                         </tr>
-                        {/* row 3 */}
+                     
                         <tr>
 
                             <td>Brice Swyre</td>
                             <td>Tax Accountant</td>
-                            <td>Red</td>
+                            <td>3900</td>
+                            <td>sucess</td>
+                            <td>22.05.23</td>
                         </tr>
                     </tbody>
                 </table>
-                <tfoot>
-                    <th>
+                <tfoot>                   
                     <div className=' mt-3 flex justify-center'>
                         <div className="btn-group">
                             <button className="btn btn-active">1</button>
@@ -88,9 +92,7 @@ const OrderTable = () => {
                             <button className="btn">3</button>
                             <button className="btn">4</button>
                         </div>
-                    </div>
-                    </th>
-                    
+                    </div> 
                 </tfoot>
             </div>
         </>

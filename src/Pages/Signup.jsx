@@ -28,7 +28,7 @@ const Signup = () => {
                     </div>
                 </div>
                 <div>
-                    <button className="btn btn-info w-full mt-4 text-1xl hover:bg-blue-500 font-bold text-white">
+                    <button className="btn btn-info bg-gradient-to-r from-[#190fcf] to-[#248e4c] w-full mt-4 text-1xl hover:text-black font-bold text-white">
                         Signup
                     </button>
                 </div>

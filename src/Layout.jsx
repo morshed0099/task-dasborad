@@ -22,20 +22,20 @@ const Layout = () => {
                         <div className=' border-none block md:hidden mb-4 lg:hidden'>
                             <SearchBar />
                         </div>
-                        <li className='mb-2'>
-                            <NavLink to='/'><RxDashboard className='text-white' />Dashborad</NavLink>
+                        <li className='mb-2 '>
+                            <NavLink className='text-1xl font-bold' to='/'><RxDashboard className=' text-2xl font-bold text-white' />Dashborad</NavLink>
                         </li>
                         <li className='mb-2'>
-                            <NavLink to='/message'><BiMessageDetail className='text-white' /> Message</NavLink>
+                            <NavLink className='text-1xl font-bold' to='/message'><BiMessageDetail className='text-2xl font-bold text-white' /> Message</NavLink>
                         </li>
                         <li className='mb-2'>
-                            <NavLink to='/product'><MdProductionQuantityLimits className='text-white' />Products</NavLink>
+                            <NavLink className='text-1xl font-bold' to='/product'><MdProductionQuantityLimits className='text-2xl font-bold text-white' />Products</NavLink>
                         </li>
                         <li className='mb-2'>
-                            <NavLink to='/login'><MdLogin className='text-white' />Login</NavLink>
+                            <NavLink className='text-1xl font-bold' to='/login'><MdLogin className='text-2xl  text-white' />Login</NavLink>
                         </li>
                         <li className='mb-2'>
-                            <button><MdOutlineLogout className='text-white' /> Logout</button>
+                            <button className='text-1xl font-bold'><MdOutlineLogout className='text-2xl font-bold text-white' /> Logout</button>
                         </li>
                     </ul>
 

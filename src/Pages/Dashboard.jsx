@@ -1,5 +1,6 @@
 
 import MonthWiseGraph from "../Components/MonthWiseGraph";
+import OrderHistory from "../Components/OrderHistory";
 import OrderTable from "../Components/OrderTable";
 import ScoreCard from "../Components/ScoreCard";
 
@@ -15,7 +16,7 @@ const Dashboard = () => {
         },
         {
             id: 2,
-            title: 'Total Amount Sale',
+            title: 'Total Sale',
             amount: '60000',
             color: "cyan-300"
         },
@@ -55,11 +56,18 @@ const Dashboard = () => {
                         <h3 className="text-2xl font-bold mt-5">Revinue</h3>
                     </div>
                 </div>
-                <MonthWiseGraph />
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                    <div className="col-span-1 lg:col-span-2 ">
+                        <MonthWiseGraph />
+                    </div>
+                    <div>
+                        <OrderHistory />
+                    </div>
+                </div>
             </div>
             <div>
                 <OrderTable />
-            </div>          
+            </div>
         </div>
     );
 };
