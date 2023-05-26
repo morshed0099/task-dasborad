@@ -1,17 +1,45 @@
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { authUser } from "../AuthProvider";
+import { toast } from "react-hot-toast";
+
 
 
 
 
 const Login = () => {
-
-    const haldelLogin=(event)=>{
+    const navigate = useNavigate()
+    const { loginUserWithEmail, setUser,loginwithGoogle } = useContext(authUser)
+    const haldelLogin = (event) => {
         event.preventDefault();
-        const form=event.target;
-        const email=form.email.value;
-        const password=form.password.value;
-        console.log(email,password);
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password);
+        loginUserWithEmail()
+            .then(result => {
+                const user = result.user
+                setUser(user)
+                toast.success('login success')
+                navigate('/')
+            }).catch(error => {
+                console.error(error)
+                toast.error(error.message)
+            })
 
+    }
+    const handelGoogleLogin=(event)=>{
+        event.preventDefault()
+        loginwithGoogle()
+        .then(result=>{
+            const user=result.user
+            setUser(user)
+            toast.success('login success')
+            navigate('/')
+        }).catch(error=>{
+            console.error(error)
+            toast.error(error.message)
+        })
     }
 
     return (
@@ -36,7 +64,7 @@ const Login = () => {
                         </label>
                     </div>
                     <div>
-                        <input  name='password' type="Password" placeholder="enter your password" className="input w-full input-bordered" />
+                        <input name='password' type="Password" placeholder="enter your password" className="input w-full input-bordered" />
                     </div>
                 </div>
                 <div>
@@ -45,9 +73,19 @@ const Login = () => {
                     </button>
                 </div>
             </form>
-           
+            <div className="flex items-center justify-center mt-4">
+                <div className="flex justify-center mt-4 mb-3">
+                    <span className="font-bolt text-2xl">--------- or -----------</span>
+                </div>
+                <button onClick={handelGoogleLogin}>
+
+                    <img className="w-12 h-12 rounded-full" src="https://th.bing.com/th/id/OIP._2KcAjhfLzoZm34LMGXQdwAAAA?pid=ImgDet&rs=1" alt="" />
+
+                </button>
+            </div>
+
             <div className="text-center mt-4">
-               Are You New ? <Link to='/signup' className="text-1xl font-bold text-blue-600" >Signup</Link>
+                Are You New ? <Link to='/signup' className="text-1xl font-bold text-blue-600" >Signup</Link>
             </div>
         </div>
     );
