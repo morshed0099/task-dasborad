@@ -8,25 +8,26 @@ import { toast } from "react-hot-toast";
 
 
 const Login = () => {
+
     const navigate = useNavigate()
     const { loginUserWithEmail, setUser, loginwithGoogle } = useContext(authUser)
-    const haldelLogin = (event) => {
-        event.preventDefault();
-        const form = event.target;
-        const email = form.email.value;
-        const password = form.password.value;
-        console.log(email, password);
-        loginUserWithEmail()
-            .then(result => {
-                const user = result.user
-                setUser(user)
-                toast.success('login success')
-                navigate('/')
-            }).catch(error => {
-                console.error(error)
-                toast.error(error.message)
-            })
 
+    const handelSubmit = (event) => {
+        event.preventDefault();
+        const from=event.target
+        const email=from.email.value;
+        const password=from.password.value;
+        console.log(email,password);
+        loginUserWithEmail(email,password)
+        .then(result=>{
+            const user=result.user
+            setUser(user)
+            toast.success('signup success')
+            navigate('/') 
+          }).catch(error=>{
+            console.error(error)
+            toast.error(error.message)
+          })
     }
     const handelGoogleLogin = (event) => {
         event.preventDefault()
@@ -45,7 +46,7 @@ const Login = () => {
 
     return (
         <div className="border-green-300 border  rounded-2xl w-96 mx-auto mt-16 shadow-md p-3">
-            <form onSubmit={haldelLogin}>
+            <form onSubmit={handelSubmit}>
                 <div className="flex mt-[-25px] justify-center">
                     <img className="w-14 h-14 rounded-full" src="https://th.bing.com/th?id=OIP.audMX4ZGbvT2_GJTx2c4GgHaHw&w=244&h=255&c=8&rs=1&qlt=90&o=6&dpr=1.1&pid=3.1&rm=2" alt="" />
                 </div>
@@ -57,7 +58,7 @@ const Login = () => {
                         </label>
                     </div>
                     <div>
-                        <input name='eamil' placeholder="example@gmail.com" type="email" className="input w-full input-bordered" />
+                        <input name='email' placeholder="example@gmail.com" type="email" className="input w-full input-bordered" />
                     </div>
                     <div className="mb-2 mt-4">
                         <label>

@@ -5,6 +5,7 @@ import MessageIcon from './MessageIcon';
 import ProfileIcon from './ProfileIcon'
 import { useContext } from 'react';
 import { authUser } from '../AuthProvider';
+import DatePicker from './DatePicker';
 
 
 const Header = () => {
@@ -17,6 +18,9 @@ const Header = () => {
             </div>
             <div className='hidden md:block lg:block'>
                 <SearchBar />
+            </div>
+            <div className='hidden lg:block'>
+                <DatePicker />
             </div>
             <div className="flex gap-6">
                 <MessageIcon />

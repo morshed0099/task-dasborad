@@ -1,7 +1,7 @@
 import { RxDashboard } from 'react-icons/rx'
 import { BiMessageDetail } from 'react-icons/bi'
 import { MdProductionQuantityLimits, MdLogin, MdOutlineLogout } from 'react-icons/md'
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import Header from './Components/Header';
 import SearchBar from './Components/SearchBar';
 import { useContext } from 'react';
@@ -12,10 +12,13 @@ import { AiFillProfile } from 'react-icons/ai';
 const Layout = () => {
 
     const { logout } = useContext(authUser)
+    const navigate =useNavigate()
+
     const handelLogOut = () => {
         logout()
         .then(()=>{
             toast.success('logout success')
+            navigate('/login')
         }).catch(error=>{
             console.error(error)
         })
