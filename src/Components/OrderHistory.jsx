@@ -27,15 +27,15 @@ const OrderHistory = () => {
                                 <div className=' text-[#8884d8] flex justify-between'>
                                     <div>
                                         <div>
-                                            <p>T-shirt</p>
+                                            <p className='text-black mt-2'>T-shirt</p>
                                             <p>Quantity-480</p>
                                         </div>
                                         <div>
-                                            <p>Pant</p>
+                                            <p className='text-black'>Pant</p>
                                             <p>Quantity-40</p>
                                         </div>
                                         <div>
-                                            <p>Shoes</p>
+                                            <p className='text-black'>Shoes</p>
                                             <p>Quantity-100</p>
                                         </div>                                       
                                     </div>
@@ -58,7 +58,7 @@ const OrderHistory = () => {
                             </div>
                             <div>
                                 <h4 className='text-black font-semibold text-1xl'>Total Order Reject</h4>
-                                <p className='text-1xl font-bold text-[#8884d8]'>price: $4000</p>
+                                <p className='text-1xl font-bold text-[#8884d8]'>price: $5000</p>
                             </div>
                             <div>
                                 <p className='text-black font-semibold text-1xl'>Product Items</p>
@@ -67,16 +67,16 @@ const OrderHistory = () => {
                                 <div className=' text-[#8884d8] flex justify-between'>
                                     <div>
                                         <div>
-                                            <p>T-shirt</p>
-                                            <p>Quantity-480</p>
+                                            <p className='text-black mt-2'>T-shirt</p>
+                                            <p>Quantity-80</p>
                                         </div>
                                         <div>
-                                            <p>Pant</p>
-                                            <p>Quantity-40</p>
+                                            <p  className='text-black' >Pant</p>
+                                            <p>Quantity-00</p>
                                         </div>
                                         <div>
-                                            <p>Shoes</p>
-                                            <p>Quantity-100</p>
+                                            <p className='text-black'>Shoes</p>
+                                            <p>Quantity-500</p>
                                         </div>                                       
                                     </div>
                                     <div className='flex items-end'>
@@ -100,7 +100,7 @@ const OrderHistory = () => {
                             </div>
                             <div>
                                 <h4 className='text-black font-semibold text-1xl'>Total Pending Order</h4>
-                                <p className='text-1xl font-bold text-[#8884d8]'>price: $4000</p>
+                                <p className='text-1xl font-bold text-[#8884d8]'>price: $2000</p>
                             </div>
                             <div>
                                 <p className='text-black font-semibold text-1xl'>Product Items</p>
@@ -109,16 +109,16 @@ const OrderHistory = () => {
                                 <div className=' text-[#8884d8] flex justify-between'>
                                     <div>
                                         <div>
-                                            <p>T-shirt</p>
-                                            <p>Quantity-480</p>
+                                            <p className='text-black mt-2'>T-shirt</p>
+                                            <p>Quantity-80</p>
                                         </div>
                                         <div>
-                                            <p>Pant</p>
-                                            <p>Quantity-40</p>
+                                            <p className='text-black'>Pant</p>
+                                            <p>Quantity-380</p>
                                         </div>
                                         <div>
-                                            <p>Shoes</p>
-                                            <p>Quantity-100</p>
+                                            <p className='text-black'>Shoes</p>
+                                            <p>Quantity-00</p>
                                         </div>                                       
                                     </div>
                                     <div className='flex items-end'>

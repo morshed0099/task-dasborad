@@ -4,8 +4,23 @@ import { MdProductionQuantityLimits, MdLogin, MdOutlineLogout } from 'react-icon
 import { NavLink, Outlet } from 'react-router-dom';
 import Header from './Components/Header';
 import SearchBar from './Components/SearchBar';
+import { useContext } from 'react';
+import { authUser } from './AuthProvider';
+import { toast } from 'react-hot-toast';
+import { AiFillProfile } from 'react-icons/ai';
 
 const Layout = () => {
+
+    const { logout } = useContext(authUser)
+    const handelLogOut = () => {
+        logout()
+        .then(()=>{
+            toast.success('logout success')
+        }).catch(error=>{
+            console.error(error)
+        })
+
+    }
     return (
         <div>
             <div className="drawer drawer-mobile">
@@ -18,7 +33,7 @@ const Layout = () => {
                 <div className="drawer-side">
                     <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
                     <ul className="menu p-4 mb-2 w-80 bg-gradient-to-t  from-[#8884d8] to-[#82ca9d] text-base-content">
-                    <label htmlFor="my-drawer-2" className="btn lg:hidden md:hidden  w-[30px] ml-[265px] mb-[30px] btn-sm">x</label>
+                        <label htmlFor="my-drawer-2" className="btn lg:hidden md:hidden  w-[30px] ml-[265px] mb-[30px] btn-sm">x</label>
                         <div className=' border-none block md:hidden mb-4 lg:hidden'>
                             <SearchBar />
                         </div>
@@ -35,7 +50,10 @@ const Layout = () => {
                             <NavLink className='text-1xl font-bold' to='/login'><MdLogin className='text-2xl  text-white' />Login</NavLink>
                         </li>
                         <li className='mb-2'>
-                            <button className='text-1xl font-bold'><MdOutlineLogout className='text-2xl font-bold text-white' /> Logout</button>
+                            <NavLink className='text-1xl font-bold' to='/profile'><AiFillProfile className='text-2xl  text-white' />Profile</NavLink>
+                        </li>
+                        <li className='mb-2'>
+                            <button onClick={handelLogOut} className='text-1xl font-bold'><MdOutlineLogout className='text-2xl font-bold text-white' /> Logout</button>
                         </li>
                     </ul>
 

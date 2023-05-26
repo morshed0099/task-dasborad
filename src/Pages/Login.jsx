@@ -9,7 +9,7 @@ import { toast } from "react-hot-toast";
 
 const Login = () => {
     const navigate = useNavigate()
-    const { loginUserWithEmail, setUser,loginwithGoogle } = useContext(authUser)
+    const { loginUserWithEmail, setUser, loginwithGoogle } = useContext(authUser)
     const haldelLogin = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -28,18 +28,19 @@ const Login = () => {
             })
 
     }
-    const handelGoogleLogin=(event)=>{
+    const handelGoogleLogin = (event) => {
         event.preventDefault()
         loginwithGoogle()
-        .then(result=>{
-            const user=result.user
-            setUser(user)
-            toast.success('login success')
-            navigate('/')
-        }).catch(error=>{
-            console.error(error)
-            toast.error(error.message)
-        })
+            .then(result => {
+                const user = result.user
+                setUser(user)
+                toast.success('login success')
+                navigate('/')
+                console.log(user)
+            }).catch(error => {
+                console.error(error)
+                toast.error(error.message)
+            })
     }
 
     return (
@@ -77,13 +78,14 @@ const Login = () => {
                 <div className="flex justify-center mt-4 mb-3">
                     <span className="font-bolt text-2xl">--------- or -----------</span>
                 </div>
+            </div>
+            <div className="flex justify-center">
                 <button onClick={handelGoogleLogin}>
 
                     <img className="w-12 h-12 rounded-full" src="https://th.bing.com/th/id/OIP._2KcAjhfLzoZm34LMGXQdwAAAA?pid=ImgDet&rs=1" alt="" />
 
                 </button>
             </div>
-
             <div className="text-center mt-4">
                 Are You New ? <Link to='/signup' className="text-1xl font-bold text-blue-600" >Signup</Link>
             </div>

@@ -5,6 +5,7 @@ import Messages from "../Pages/Messages";
 import Products from "../Pages/Products";
 import Login from "../Pages/Login";
 import Signup from "../Pages/Signup";
+import Profile from "../Pages/Profile";
 
 
 export const router=createBrowserRouter([
@@ -31,6 +32,10 @@ export const router=createBrowserRouter([
             {
                 path:"/signup",
                 element:<Signup />
+            },
+            {
+                path:'/profile',
+                element:<Profile />
             }
         ]
     }
